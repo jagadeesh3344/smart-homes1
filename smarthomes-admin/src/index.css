@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+/* ==========================================
+   ELEGANT DARK: THEME PROPERTY OVERRIDES
+   ========================================== */
+
+:root {
+  background-color: #0a0a0a !important;
+  color: #e5e5e5 !important;
+}
+
+body {
+  background-color: #0a0a0a !important;
+  color: #e5e5e5 !important;
+}
+
+/* Base Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Containers & Cards (Obvert bg-white to Deep Onyx) */
+.bg-white,
+[class*="bg-white"] {
+  background-color: #111111 !important;
+  color: #e5e5e5 !important;
+}
+
+.bg-gray-50,
+.bg-gray-100\/50,
+.bg-gray-50\/50,
+.bg-gray-50\/40,
+[class*="bg-gray-50"],
+[class*="bg-gray-100"] {
+  background-color: #151515 !important;
+  color: #d4d4d4 !important;
+}
+
+/* Flatten Depth & Borders (Standardize Gray Bordering to Charcoal) */
+.border,
+.border-gray-50,
+.border-gray-100,
+.border-gray-200,
+.border-gray-300,
+.border-gray-400,
+.divide-gray-100,
+[class*="border-gray-"],
+[class*="divide-gray-"] {
+  border-color: #222222 !important;
+}
+
+/* Flatten shadows to match premium minimalist architecture */
+.shadow-xs,
+.shadow-sm,
+.shadow-md,
+.shadow-lg,
+.shadow-xl,
+.shadow-2xl {
+  box-shadow: none !important;
+}
+
+/* Typography Scale Overrides */
+.text-gray-900,
+.text-gray-800,
+.text-gray-750,
+.text-gray-700,
+[class*="text-gray-800"],
+[class*="text-gray-700"] {
+  color: #e5e5e5 !important;
+}
+
+.text-gray-600,
+.text-gray-500,
+[class*="text-gray-600"],
+[class*="text-gray-500"] {
+  color: #888888 !important;
+}
+
+.text-gray-400,
+[class*="text-gray-400"] {
+  color: #666666 !important;
+}
+
+/* Executive Accent Headers */
+h1, h2, h3, .font-serif-header {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
+}
+
+h2, h3 {
+  color: #d4d4d4 !important;
+}
+
+/* Elegant Gold Leaf Highlights (#c4a46a) */
+.text-indigo-600,
+.text-indigo-700,
+.text-indigo-800,
+.text-indigo-950,
+.text-indigo-650,
+[class*="text-indigo-"] {
+  color: #c4a46a !important;
+}
+
+.bg-indigo-50,
+.bg-indigo-100,
+.bg-indigo-100\/50,
+.bg-indigo-500\/10,
+.bg-indigo-900\/60,
+[class*="bg-indigo-"] {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+  color: #c4a46a !important;
+}
+
+/* Form Controls & Inputs (Deep Dark Fields) */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+textarea,
+select {
+  background-color: #151515 !important;
+  border: 1px solid #333333 !important;
+  color: #e5e5e5 !important;
+  border-radius: 2px !important;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #c4a46a !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* High Contrast Elegant Dark Buttons */
+button.bg-indigo-600,
+button[class*="bg-indigo-600"],
+input[type="submit"],
+.btn-primary-accent {
+  background-color: #c4a46a !important;
+  color: #0a0a0a !important;
+  font-family: Georgia, serif !important;
+  font-style: italic !important;
+  border: 1px solid #c4a46a !important;
+  border-radius: 2px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+button.bg-indigo-600:hover,
+button[class*="bg-indigo-600"]:hover,
+input[type="submit"]:hover {
+  background-color: #b09058 !important;
+  border-color: #b09058 !important;
+  color: #0a0a0a !important;
+}
+
+/* Secondary Buttons */
+button.bg-white,
+button[class*="bg-white"],
+.btn-secondary-accent {
+  background-color: #111111 !important;
+  border: 1px solid #222222 !important;
+  color: #888888 !important;
+  border-radius: 2px !important;
+}
+
+button.bg-white:hover,
+button[class*="bg-white"]:hover {
+  background-color: #1a1a1a !important;
+  color: #bbb !important;
+  border-color: #333333 !important;
+}
+
+/* Table Hover highlights & Zebra stripes */
+tr:hover,
+.hover\:bg-gray-50:hover,
+.hover\:bg-gray-50\/50:hover,
+.hover\:bg-gray-50\/40:hover {
+  background-color: #151515 !important;
+}
+
+th {
+  background-color: #111111 !important;
+  color: #666666 !important;
+  font-family: monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.15em !important;
+}
+
+/* Badges & Pills */
+span.bg-green-50,
+span.bg-green-500\/95,
+[class*="bg-green-"] {
+  background-color: #0d2e1b !important;
+  color: #52c41a !important;
+  border: 1px solid #14532d !important;
+}
+
+span.bg-red-50,
+span.bg-red-500\/95,
+[class*="bg-red-"] {
+  background-color: #4c1d1d !important;
+  color: #ff4d4f !important;
+  border: 1px solid #7f1d1d !important;
+}
+
+/* Material indicators & lists configuration */
+span.bg-indigo-50 {
+  background-color: #1a1a1a !important;
+  color: #c4a46a !important;
+  border: 1px solid #333333 !important;
+}
+
+/* Special adjustments for charts and analytics elements inside views */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #222 !important;
+}
+
+.recharts-text {
+  fill: #666 !important;
+}
+
+.recharts-legend-item-text {
+  color: #e5e5e5 !important;
+}
+
+.recharts-default-tooltip {
+  background-color: #111 !important;
+  border: 1px solid #222 !important;
+}

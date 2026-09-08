@@ -1,0 +1,6 @@
+{
+  "name": "Aetheria Smart Home",
+  "description": "Premium luxury smart home automation company offering custom IoT solutions, intelligent lighting, security systems, and smart living packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

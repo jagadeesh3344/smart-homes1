@@ -1,0 +1,215 @@
+{
+  "entities": {
+    "product": {
+      "title": "Product",
+      "description": "Residential smart product definition",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique product ID" },
+        "name": { "type": "string", "maxLength": 150 },
+        "sku": { "type": "string", "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "brand": { "type": "string", "maxLength": 100 },
+        "category": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 3000 },
+        "shortDescription": { "type": "string", "maxLength": 500 },
+        "price": { "type": "number" },
+        "discountPrice": { "type": "number" },
+        "stockQuantity": { "type": "number" },
+        "stockStatus": { "type": "string", "enum": ["in_stock", "low_stock", "out_of_stock"] },
+        "productImages": { "type": "array" },
+        "specifications": { "type": "object" },
+        "features": { "type": "array" },
+        "compatibility": { "type": "array" },
+        "featured": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "sku", "brand", "category", "price", "stockQuantity", "stockStatus", "createdAt", "updatedAt"]
+    },
+    "category": {
+      "title": "Category",
+      "description": "Product hierarchy category",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "slug": { "type": "string", "pattern": "^[a-z0-9\\-]+$" },
+        "description": { "type": "string", "maxLength": 500 },
+        "image": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "slug"]
+    },
+    "brand": {
+      "title": "Brand",
+      "description": "Partner smart technology brand logo definition",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "sub": { "type": "string", "maxLength": 200 }
+      },
+      "required": ["name"]
+    },
+    "order": {
+      "title": "Order",
+      "description": "Customer completed order structure",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderNumber": { "type": "string" },
+        "customerId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "status": { "type": "string", "enum": ["pending", "processed", "shipped", "completed", "cancelled"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["orderNumber", "customerId", "customerName", "email", "items", "totalAmount", "status", "createdAt"]
+    },
+    "customer": {
+      "title": "Customer",
+      "description": "Authorized customer private profile data",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 150 },
+        "email": { "type": "string" },
+        "phone": { "type": "string", "maxLength": 20 },
+        "address": { "type": "string", "maxLength": 500 },
+        "city": { "type": "string", "maxLength": 100 },
+        "role": { "type": "string", "enum": ["customer", "admin"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "email", "role"]
+    },
+    "enquiry": {
+      "title": "Enquiry",
+      "description": "General pre-sale configuration lead / enquiry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "enquiryNumber": { "type": "string" },
+        "customerName": { "type": "string", "maxLength": 150 },
+        "email": { "type": "string" },
+        "phone": { "type": "string", "maxLength": 20 },
+        "message": { "type": "string", "maxLength": 3000 },
+        "status": { "type": "string", "enum": ["new", "contacted", "qualified", "closed"] },
+        "rooms": { "type": "array" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["enquiryNumber", "customerName", "email", "status", "createdAt"]
+    },
+    "offer": {
+      "title": "Offer",
+      "description": "Seasonal advertising banner and discounts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "code": { "type": "string" },
+        "discountType": { "type": "string" },
+        "discountValue": { "type": "number" },
+        "expiryDate": { "type": "string" }
+      },
+      "required": ["title", "description"]
+    },
+    "video": {
+      "title": "Video",
+      "description": "Showcase smart residential YouTube video clips",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "url": { "type": "string" },
+        "duration": { "type": "string" },
+        "thumbnail": { "type": "string" }
+      },
+      "required": ["title", "url"]
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Frequently asked questions collection",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "question": { "type": "string", "maxLength": 300 },
+        "answer": { "type": "string", "maxLength": 2000 },
+        "category": { "type": "string" }
+      },
+      "required": ["question", "answer"]
+    },
+    "siteContent": {
+      "title": "SiteContent",
+      "description": "Global home text strings configuration",
+      "type": "object",
+      "properties": {
+        "heroTitle": { "type": "string" },
+        "heroSubtitle": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" }
+      },
+      "required": ["heroTitle", "heroSubtitle", "phone", "email"]
+    },
+    "seoSettings": {
+      "title": "SeoSettings",
+      "description": "Metatags search engine optimization schema",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 300 },
+        "keywords": { "type": "string", "maxLength": 500 },
+        "ogImage": { "type": "string" }
+      },
+      "required": ["title", "description"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "product",
+      "description": "Dynamic smart products catalog"
+    },
+    "/categories/{categoryId}": {
+      "schema": "category",
+      "description": "E-commerce product categories"
+    },
+    "/brands/{brandId}": {
+      "schema": "brand",
+      "description": "Luxury dynamic technology brands list"
+    },
+    "/orders/{orderId}": {
+      "schema": "order",
+      "description": "Client transactions database"
+    },
+    "/customers/{customerId}": {
+      "schema": "customer",
+      "description": "Client secure profile mappings"
+    },
+    "/enquiries/{enquiryId}": {
+      "schema": "enquiry",
+      "description": "Quotations and architectural lead items"
+    },
+    "/offers/{offerId}": {
+      "schema": "offer",
+      "description": "Active sales campaign codes"
+    },
+    "/videos/{videoId}": {
+      "schema": "video",
+      "description": "Curated training and walkthrough showcase videos"
+    },
+    "/faqs/{faqId}": {
+      "schema": "faq",
+      "description": "Knowledgebase answers support schema"
+    },
+    "/settings/{settingsId}": {
+      "schema": "siteContent",
+      "description": "Global dynamic configurations and SEO data"
+    }
+  }
+}

@@ -1,0 +1,682 @@
+{
+  "products": [
+    {
+      "id": "prod-1788538415120-7ljtl",
+      "name": "Bang & Olufsen Beolab 28 Luxury Floor Speakers",
+      "slug": "bang-olufsen-beolab-28-luxury-floor-speakers",
+      "sku": "BO-LAB-28-SMK",
+      "brand": "Bang & Olufsen",
+      "categoryId": "cat-audio",
+      "categoryName": "High-Fidelity Multi-Room Audio",
+      "subcategoryId": "",
+      "subcategoryName": "",
+      "shortDescription": "Adaptive wireless architectural floor speaker pair with mechanical curtain movement.",
+      "description": "Pinnacle acoustic perfection featuring tuneable beam directivity, integrated streaming, and solid walnut wood lamellas.",
+      "price": 1450000,
+      "originalPrice": 1450000,
+      "salePrice": 1450000,
+      "priceOnRequest": false,
+      "discountPercentage": 0,
+      "stock": 3,
+      "status": "Active",
+      "featured": true,
+      "isFeatured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80",
+      "variants": [],
+      "specifications": [],
+      "specificationsMap": {},
+      "features": [
+        "Smart App Control",
+        "Bespoke Finish"
+      ],
+      "compatibility": [
+        "Apple Home",
+        "Google Home"
+      ],
+      "applications": [
+        "Residential",
+        "Luxury Villa"
+      ],
+      "warranty": "3 Years Comprehensive Warranty",
+      "tags": [
+        "smart-home",
+        "luxury"
+      ],
+      "cataloguePage": 1,
+      "protocol": "Zigbee 3.0 / Matter",
+      "createdAt": "2026-09-04T16:13:35.121Z",
+      "updatedAt": "2026-09-04T16:13:35.121Z"
+    },
+    {
+      "id": "prod-lutron-palladiom",
+      "name": "Lutron Palladiom Architectural Keypad",
+      "slug": "lutron-palladiom-keypad",
+      "sku": "LUT-PAL-4B-AL",
+      "brand": "Lutron",
+      "categoryId": "cat-switches",
+      "categoryName": "Architectural Switches & Keypads",
+      "shortDescription": "Minimalist metallic keypad with tactile backlit buttons and dynamic status engraving.",
+      "description": "The Lutron Palladiom keypad features aesthetic precision with flush architectural mounting, customizable ambient backlighting, and integration into Lutron HomeWorks and QSX processors.",
+      "price": 38500,
+      "originalPrice": 42000,
+      "salePrice": 38500,
+      "stock": 22,
+      "status": "Active",
+      "featured": true,
+      "isFeatured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        {
+          "id": "var-1",
+          "name": "Brushed Brass 4-Button",
+          "sku": "LUT-PAL-4B-BB",
+          "price": 41000,
+          "originalPrice": 45000,
+          "stock": 12,
+          "smart": true,
+          "finish": "Brushed Brass"
+        },
+        {
+          "id": "var-2",
+          "name": "Matte Satin Nickel 4-Button",
+          "sku": "LUT-PAL-4B-SN",
+          "price": 38500,
+          "originalPrice": 42000,
+          "stock": 12,
+          "smart": true,
+          "finish": "Satin Nickel"
+        }
+      ],
+      "specifications": [
+        {
+          "key": "Protocol",
+          "value": "Clear Connect Type X / Wired QS"
+        },
+        {
+          "key": "Voltage",
+          "value": "24-36V DC"
+        },
+        {
+          "key": "Material",
+          "value": "Architectural Grade Solid Milled Brass"
+        },
+        {
+          "key": "Mounting",
+          "value": "Standard 1-gang UK/EU or US Backbox"
+        }
+      ],
+      "specificationsMap": {
+        "Protocol": "Clear Connect Type X / Wired QS",
+        "Voltage": "24-36V DC",
+        "Material": "Architectural Grade Solid Milled Brass"
+      },
+      "features": [
+        "Backlit Engraved Buttons",
+        "Dynamic Ambient Light Sensing",
+        "Silent Tactile Travel"
+      ],
+      "compatibility": [
+        "Apple Home",
+        "Crestron Home",
+        "Control4",
+        "Home Assistant"
+      ],
+      "protocol": "Clear Connect",
+      "createdAt": "2026-09-04T16:11:57.935Z",
+      "updatedAt": "2026-09-04T16:11:57.935Z"
+    },
+    {
+      "id": "prod-bang-beosound",
+      "name": "Bang & Olufsen Beosound Stage Soundbar",
+      "slug": "beosound-stage-soundbar",
+      "sku": "BO-STG-OAK-01",
+      "brand": "Bang & Olufsen",
+      "categoryId": "cat-audio",
+      "categoryName": "High-Fidelity Multi-Room Audio",
+      "shortDescription": "Crafted natural smoked oak speaker system with Dolby Atmos 3-channel spatial performance.",
+      "description": "Experience room-filling acoustic brilliance with 11 custom driver amplifiers, HDMI eARC connectivity, AirPlay 2, and Chromecast built-in.",
+      "price": 185000,
+      "originalPrice": 199000,
+      "salePrice": 185000,
+      "stock": 8,
+      "status": "Active",
+      "featured": true,
+      "isFeatured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        {
+          "id": "var-bo-1",
+          "name": "Smoked Oak & Grey Fabric",
+          "sku": "BO-STG-OAK",
+          "price": 185000,
+          "stock": 5,
+          "smart": true
+        },
+        {
+          "id": "var-bo-2",
+          "name": "Natural Aluminium & Black Fabric",
+          "sku": "BO-STG-ALU",
+          "price": 165000,
+          "stock": 3,
+          "smart": true
+        }
+      ],
+      "specifications": [
+        {
+          "key": "Amplifiers",
+          "value": "4 x 50W Class D for Woofers, 4 x 50W for Mid-range, 3 x 50W for Tweeters"
+        },
+        {
+          "key": "Wireless",
+          "value": "Wi-Fi 802.11ac, Bluetooth 5.1, AirPlay 2, Beolink Multiroom"
+        },
+        {
+          "key": "Dimensions",
+          "value": "110.4 x 17 x 7.7 cm"
+        }
+      ],
+      "features": [
+        "Dolby Atmos Acoustic Staging",
+        "HDMI eARC & 4K Passthrough",
+        "Multi-room Wireless Sync"
+      ],
+      "compatibility": [
+        "AirPlay 2",
+        "Spotify Connect",
+        "Chromecast",
+        "Matter"
+      ],
+      "createdAt": "2026-09-04T16:11:57.935Z",
+      "updatedAt": "2026-09-04T16:11:57.935Z"
+    },
+    {
+      "id": "prod-somfy-glydea",
+      "name": "Somfy Glydea Ultra Smart Motorized Drapery",
+      "slug": "somfy-glydea-ultra-motor",
+      "sku": "SMF-GLYD-60E",
+      "brand": "Somfy",
+      "categoryId": "cat-shading",
+      "categoryName": "Motorized Architectural Shading",
+      "shortDescription": "Acoustically isolated motorized curtain track capable of effortlessly pulling up to 60kg fabric.",
+      "description": "Featuring Somfy silent motor technology (<38 dBA) with soft start/stop, manual touch motion override, and native Zigbee 3.0 / RTS control integration.",
+      "price": 49500,
+      "originalPrice": 55000,
+      "salePrice": 49500,
+      "stock": 16,
+      "status": "Active",
+      "featured": true,
+      "isFeatured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        {
+          "id": "var-smf-1",
+          "name": "4-Meter Straight Track Kit",
+          "sku": "SMF-GLYD-4M",
+          "price": 49500,
+          "stock": 10,
+          "smart": true
+        },
+        {
+          "id": "var-smf-2",
+          "name": "6-Meter Straight Track Kit",
+          "sku": "SMF-GLYD-6M",
+          "price": 62000,
+          "stock": 8,
+          "smart": true
+        }
+      ],
+      "specifications": [
+        {
+          "key": "Load Capacity",
+          "value": "60 kg"
+        },
+        {
+          "key": "Noise Level",
+          "value": "< 38 dBA (Whisper Quiet)"
+        },
+        {
+          "key": "Control Protocols",
+          "value": "Zigbee 3.0 & RTS 433 MHz"
+        }
+      ],
+      "features": [
+        "Soft Start and Soft Stop",
+        "Touch Motion Manual Override",
+        "Adjustable Speed Curves"
+      ],
+      "compatibility": [
+        "Crestron",
+        "Lutron",
+        "KNX",
+        "Zigbee 3.0"
+      ],
+      "createdAt": "2026-09-04T16:11:57.935Z",
+      "updatedAt": "2026-09-04T16:11:57.935Z"
+    },
+    {
+      "id": "prod-crestron-horizon",
+      "name": "Crestron Horizon Architectural Keypad",
+      "slug": "crestron-horizon-keypad",
+      "sku": "CRE-HZ-KP-BK",
+      "brand": "Crestron",
+      "categoryId": "cat-switches",
+      "categoryName": "Architectural Switches & Keypads",
+      "shortDescription": "Luxury custom-engraved designer keypad with multi-color programmable LED lightbars.",
+      "description": "The Horizon keypad collection offers peak residential control luxury. Custom engraved button combinations with top-and-bottom controllable RGB accent trims.",
+      "price": 44000,
+      "originalPrice": 48000,
+      "salePrice": 44000,
+      "stock": 12,
+      "status": "Active",
+      "featured": false,
+      "images": [
+        "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        {
+          "id": "var-cre-1",
+          "name": "Matte Anthracite Black",
+          "sku": "CRE-HZ-BLK",
+          "price": 44000,
+          "stock": 10,
+          "smart": true
+        },
+        {
+          "id": "var-cre-2",
+          "name": "Polar White Finish",
+          "sku": "CRE-HZ-WHT",
+          "price": 44000,
+          "stock": 5,
+          "smart": true
+        }
+      ],
+      "specifications": [
+        {
+          "key": "Protocol",
+          "value": "CrescoNet Wired / Horizon Wireless"
+        },
+        {
+          "key": "Backlight",
+          "value": "Full RGB Spectrum per Button"
+        }
+      ],
+      "features": [
+        "Custom Icon Engraving",
+        "RGB Edge Lighting",
+        "Proximity Sensor Wake-up"
+      ],
+      "compatibility": [
+        "Crestron Home",
+        "Crestron SIMPL Windows"
+      ],
+      "createdAt": "2026-09-04T16:11:57.935Z",
+      "updatedAt": "2026-09-04T16:11:57.935Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-switches",
+      "name": "Architectural Switches & Keypads",
+      "slug": "architectural-switches",
+      "description": "Bespoke mechanical keypads, tactile glass switches, and custom back-lit architectural controllers.",
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
+      "sortOrder": 1,
+      "displayOrder": 1,
+      "active": true,
+      "featured": true,
+      "createdAt": "2026-09-04T16:11:57.934Z"
+    },
+    {
+      "id": "cat-lighting",
+      "name": "Circadian Smart Lighting",
+      "slug": "circadian-lighting",
+      "description": "Tuneable white track spots, hidden cove lighting, and human-centric circadian illumination systems.",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+      "sortOrder": 2,
+      "displayOrder": 2,
+      "active": true,
+      "featured": true,
+      "createdAt": "2026-09-04T16:11:57.934Z"
+    },
+    {
+      "id": "cat-audio",
+      "name": "High-Fidelity Multi-Room Audio",
+      "slug": "multi-room-audio",
+      "description": "Architectural in-wall invisible speakers, synchronized zone amplifiers, and bespoke cinema sound stages.",
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80",
+      "sortOrder": 3,
+      "displayOrder": 3,
+      "active": true,
+      "featured": true,
+      "createdAt": "2026-09-04T16:11:57.934Z"
+    },
+    {
+      "id": "cat-shading",
+      "name": "Motorized Architectural Shading",
+      "slug": "motorized-shading",
+      "description": "Ultra-silent motorized roller shades, Roman drapes, and skylight solar control fabrics.",
+      "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+      "sortOrder": 4,
+      "displayOrder": 4,
+      "active": true,
+      "featured": true,
+      "createdAt": "2026-09-04T16:11:57.934Z"
+    },
+    {
+      "id": "cat-security",
+      "name": "Biometric Access & Smart Security",
+      "slug": "security-access",
+      "description": "Facial recognition entrance locks, perimeter mmWave radar sensors, and secure zero-trust cameras.",
+      "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+      "sortOrder": 5,
+      "displayOrder": 5,
+      "active": true,
+      "featured": false,
+      "createdAt": "2026-09-04T16:11:57.934Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1788849188111-5pzl",
+      "orderNumber": "ATH-999888",
+      "customerName": "Aetheria VIP Test Client",
+      "customerEmail": "vip@testsmart.com",
+      "customerPhone": "+91 98765 00000",
+      "address": "",
+      "city": "",
+      "shippingAddress": {
+        "street": "Direct Concierge Delivery Destination",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500034",
+        "country": "India"
+      },
+      "items": [
+        {
+          "productId": "prod-1788538415120-7ljtl",
+          "productName": "Bang & Olufsen Beolab 28 Luxury Floor Speakers",
+          "quantity": 1,
+          "price": 38500
+        }
+      ],
+      "subtotal": 32627,
+      "tax": 5873,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 38500,
+      "totalAmount": 38500,
+      "orderStatus": "Paid",
+      "paymentStatus": "Paid",
+      "paymentProvider": "Razorpay",
+      "razorpayOrderId": "order_84ab105830a438ea",
+      "razorpayPaymentId": "pay_test_123",
+      "notes": "",
+      "type": "purchase",
+      "createdAt": "2026-09-08T06:33:08.111Z",
+      "updatedAt": "2026-09-08T06:33:08.111Z"
+    },
+    {
+      "id": "ord-1788542889829-rx88",
+      "orderNumber": "ATH-391554",
+      "customerName": "Aarav Sharma",
+      "customerEmail": "aarav.sharma@example.com",
+      "customerPhone": "+91 99887 76655",
+      "address": "Plot 42, Road 36, Jubilee Hills",
+      "city": "Hyderabad",
+      "shippingAddress": {
+        "street": "Plot 42, Road 36, Jubilee Hills",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500034",
+        "country": "India"
+      },
+      "items": [
+        {
+          "productId": "prod-crestron-horizon",
+          "productName": "Crestron Horizon Keypad",
+          "quantity": 2,
+          "price": 42000
+        }
+      ],
+      "subtotal": 84000,
+      "tax": 15120,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 99120,
+      "totalAmount": 99120,
+      "orderStatus": "Confirmed",
+      "paymentStatus": "Pending",
+      "paymentProvider": "Razorpay",
+      "notes": "Please coordinate doorstep payment with delivery agent.",
+      "type": "purchase",
+      "createdAt": "2026-09-04T17:28:09.830Z",
+      "updatedAt": "2026-09-04T17:28:09.830Z"
+    },
+    {
+      "id": "ord-1788541729279-diqx",
+      "orderNumber": "ATH-772370",
+      "customerName": "Rahul Sharma",
+      "customerEmail": "rahul.sharma@luxuryvilla.com",
+      "customerPhone": "+91 98888 11223",
+      "address": "Skyline Towers, Penthouse 401, Whitefield, Bangalore",
+      "city": "",
+      "items": [
+        {
+          "productId": "prod-somfy-glydea",
+          "sku": "SMF-GLYD-4M",
+          "variantName": "4-Meter Straight Track Kit",
+          "quantity": 2,
+          "price": 49500,
+          "productName": "Somfy Glydea Ultra Smart Motorized Drapery"
+        },
+        {
+          "productId": "prod-crestron-horizon",
+          "sku": "CRE-HZ-BLK",
+          "variantName": "Matte Anthracite Black",
+          "quantity": 1,
+          "price": 44000,
+          "productName": "Crestron Horizon Architectural Keypad"
+        }
+      ],
+      "subtotal": 143000,
+      "totalAmount": 143000,
+      "orderStatus": "Confirmed",
+      "paymentStatus": "Pending",
+      "paymentProvider": "Razorpay",
+      "notes": "",
+      "type": "purchase",
+      "createdAt": "2026-09-04T17:08:49.279Z",
+      "updatedAt": "2026-09-04T17:08:49.279Z"
+    },
+    {
+      "id": "ord-1788538446145-yprp",
+      "orderNumber": "ATH-325329",
+      "customerName": "Venkata Naveen",
+      "customerEmail": "naveen.client@luxuryhomes.in",
+      "customerPhone": "+91 99887 76655",
+      "address": "Villa 12, Palm Meadows, Bangalore",
+      "city": "",
+      "items": [
+        {
+          "price": 38500,
+          "productName": "Lutron Palladiom Architectural Keypad",
+          "productId": "prod-lutron-palladiom",
+          "quantity": 2,
+          "sku": "LUT-PAL-4B-AL"
+        }
+      ],
+      "subtotal": 77000,
+      "totalAmount": 77000,
+      "orderStatus": "Confirmed",
+      "paymentStatus": "Paid",
+      "paymentProvider": "Razorpay",
+      "notes": "",
+      "type": "purchase",
+      "createdAt": "2026-09-04T16:14:06.145Z",
+      "updatedAt": "2026-09-04T16:14:06.145Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust-1788538446145",
+      "name": "Venkata Naveen",
+      "email": "naveen.client@luxuryhomes.in",
+      "phone": "+91 99887 76655",
+      "numberForOrders": 1,
+      "totalPurchaseValue": 77000,
+      "lastOrderDate": "2026-09-04T16:14:06.145Z",
+      "accountStatus": "Active",
+      "createdAt": "2026-09-04T16:14:06.145Z"
+    },
+    {
+      "id": "cust-1788541729279",
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@luxuryvilla.com",
+      "phone": "+91 98888 11223",
+      "numberForOrders": 1,
+      "totalPurchaseValue": 143000,
+      "lastOrderDate": "2026-09-04T17:08:49.279Z",
+      "accountStatus": "Active",
+      "createdAt": "2026-09-04T17:08:49.279Z"
+    },
+    {
+      "id": "cust-1788542889830",
+      "name": "Aarav Sharma",
+      "email": "aarav.sharma@example.com",
+      "phone": "+91 99887 76655",
+      "numberForOrders": 1,
+      "totalPurchaseValue": 99120,
+      "lastOrderDate": "2026-09-04T17:28:09.830Z",
+      "accountStatus": "Suspended",
+      "createdAt": "2026-09-04T17:28:09.830Z",
+      "addresses": [
+        {
+          "street": "Plot 42, Road 36, Jubilee Hills",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "postalCode": "500034",
+          "country": "India",
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "id": "cust-1788849188112",
+      "name": "Aetheria VIP Test Client",
+      "email": "vip@testsmart.com",
+      "phone": "+91 98765 00000",
+      "numberForOrders": 1,
+      "totalPurchaseValue": 38500,
+      "lastOrderDate": "2026-09-08T06:33:08.112Z",
+      "accountStatus": "Active",
+      "createdAt": "2026-09-08T06:33:08.112Z",
+      "addresses": [
+        {
+          "street": "Direct Concierge Delivery Destination",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "postalCode": "500034",
+          "country": "India",
+          "isDefault": true
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "off-architectural-2026",
+      "title": "Architectural Villa Automation Suite",
+      "code": "AETHERIA10",
+      "description": "10% exclusive project reduction on entire whole-home Lutron & Bang & Olufsen ecosystem orchestrations.",
+      "discountType": "Percentage",
+      "discountValue": 10,
+      "discountPercentage": 10,
+      "active": true,
+      "isActive": true,
+      "bannerImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "createdAt": "2026-09-04T16:11:57.935Z"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "How does Aetheria integrate with existing home electrical wiring?",
+      "answer": "Our solutions offer both non-invasive wireless retrofit retrofits (via Zigbee 3.0 & Thread) and high-end wired bus architectures (KNX & Lutron HomeWorks) that require zero wall tearing for modern villas.",
+      "category": "general",
+      "active": true,
+      "createdAt": "2026-09-04T16:11:57.935Z"
+    },
+    {
+      "id": "faq-2",
+      "question": "Can I control the smart home systems from my iPhone and Android phones simultaneously?",
+      "answer": "Yes! Both Apple HomeKit, Google Home, and our dedicated Aetheria mobile app provide real-time multi-user synchronization across all iOS and Android devices.",
+      "category": "switches",
+      "active": true,
+      "createdAt": "2026-09-04T16:11:57.935Z"
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "title": "Luxury Villa Smart Lighting & Circadian Walkthrough",
+      "description": "A deep look into human-centric tuneable architectural spotlighting and motorized sheer drape integration.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "youtubeId": "dQw4w9WgXcQ",
+      "thumbnail": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "category": "Showcases",
+      "active": true,
+      "createdAt": "2026-09-04T16:11:57.935Z"
+    }
+  ],
+  "homepage": {
+    "heroTitle": "Absolute Intelligent Architecture",
+    "heroSubtitle": "Luxury Smart Home Automation Systems, Architectural Switches, and Acoustic Orchestrations.",
+    "heroDescription": "Transforming luxury residences with state-of-the-art Lutron lighting, Crestron automation, and Bang & Olufsen acoustic staging.",
+    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    "heroButtonText": "Explore Collection",
+    "heroButtonDestination": "shop",
+    "promotionalText": "Engineered for seamless elegance. Visit our private architectural experience center.",
+    "bannerImage": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    "bannerLink": "configurator"
+  },
+  "settings": {
+    "businessName": "Aetheria Smart Home Systems",
+    "businessEmail": "concierge@aetheriasmarthome.com",
+    "phone": "+91 98765 43210",
+    "whatsappNumber": "+91 98765 43210",
+    "address": "Plot 42, Jubilee Hills, Luxury Design Corridor, Hyderabad, India",
+    "currency": "INR (₹)",
+    "taxRate": 18,
+    "shippingFeeBase": 0,
+    "lowStockThreshold": 5,
+    "socialFacebook": "https://facebook.com",
+    "socialInstagram": "https://instagram.com",
+    "socialYoutube": "https://youtube.com"
+  },
+  "seo": [
+    {
+      "page": "Home",
+      "title": "Aetheria Smart Home | Absolute Intelligent Architecture",
+      "metaDescription": "Discover bespoke residential automation, tuneable circadian lighting, and multi-room acoustic systems.",
+      "keywords": "smart home, luxury home automation, lutron, crestron, bang olufsen, hyderabad"
+    }
+  ],
+  "version": 1,
+  "lastUpdated": "2026-09-08T06:33:09.759Z"
+}

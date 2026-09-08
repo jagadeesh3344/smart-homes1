@@ -1,0 +1,6 @@
+{
+  "name": "SmartHomes Admin",
+  "description": "Admin dashboard for SmartHomes platform, featuring real-time catalogs, order books, category management, video listings, FAQs, coupons, global settings, and audit logs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

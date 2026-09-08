@@ -1,0 +1,197 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global Safety Net - Default Deny Everything
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Reusable Global Helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    // Authoritative Admin Verification
+    function isAdmin() {
+      return isSignedIn() && (
+        (request.auth.token.email == 'uvjagadeesh1234@gmail.com' && request.auth.token.email_verified == true) ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Type and Attribute-Level Validation Blueprints (Anti-Update-Gap)
+    function isValidProduct(data) {
+      return data.name is string && data.name.size() <= 150
+          && data.sku is string && data.sku.matches('^[a-zA-Z0-9_\\-]+$')
+          && data.brand is string && data.brand.size() <= 100
+          && data.category is string && data.category.size() <= 100
+          && data.price is number && data.price >= 0
+          && (data.discountPrice == null || (data.discountPrice is number && data.discountPrice >= 0))
+          && data.stockQuantity is number && data.stockQuantity >= 0
+          && data.stockStatus is string && (data.stockStatus == 'in_stock' || data.stockStatus == 'low_stock' || data.stockStatus == 'out_of_stock')
+          && (data.featured == null || data.featured is bool);
+    }
+
+    function isValidCategory(data) {
+      return data.name is string && data.name.size() <= 100
+          && data.slug is string && data.slug.matches('^[a-z0-9\\-]+$')
+          && (data.description == null || (data.description is string && data.description.size() <= 500));
+    }
+
+    function isValidBrand(data) {
+      return data.name is string && data.name.size() <= 100
+          && (data.sub == null || (data.sub is string && data.sub.size() <= 200));
+    }
+
+    function isValidOrder(data) {
+      return data.orderNumber is string && data.orderNumber.size() <= 50
+          && data.customerId is string && data.customerId.size() <= 128
+          && data.customerName is string && data.customerName.size() <= 150
+          && data.email is string && data.email.size() <= 250
+          && data.items is list && data.items.size() <= 100
+          && data.totalAmount is number && data.totalAmount >= 0
+          && data.status is string && (data.status == 'pending' || data.status == 'processed' || data.status == 'shipped' || data.status == 'completed' || data.status == 'cancelled');
+    }
+
+    function isValidCustomer(data) {
+      return data.name is string && data.name.size() <= 150
+          && data.email is string && data.email.size() <= 250
+          && data.role is string && (data.role == 'customer' || data.role == 'admin');
+    }
+
+    function isValidEnquiry(data) {
+      return data.enquiryNumber is string && data.enquiryNumber.size() <= 50
+          && data.customerName is string && data.customerName.size() <= 150
+          && data.email is string && data.email.size() <= 250
+          && data.status is string && (data.status == 'new' || data.status == 'contacted' || data.status == 'qualified' || data.status == 'closed')
+          && (data.message == null || (data.message is string && data.message.size() <= 3000));
+    }
+
+    function isValidOffer(data) {
+      return data.title is string && data.title.size() <= 200
+          && data.description is string && data.description.size() <= 1000;
+    }
+
+    function isValidVideo(data) {
+      return data.title is string && data.title.size() <= 200
+          && data.url is string && data.url.size() <= 500;
+    }
+
+    function isValidFAQ(data) {
+      return data.question is string && data.question.size() <= 300
+          && data.answer is string && data.answer.size() <= 2000;
+    }
+
+    // --- COLLECTION PATH MATCHERS ---
+
+    // 1. Products Catalog (Read Publicly, Mutated ONLY by Admins)
+    match /products/{productId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidProduct(incoming()) && isValidId(productId);
+      allow update: if isAdmin() && isValidProduct(incoming()) && (
+        incoming().sku == existing().sku // Immutability guarantee
+      );
+      allow delete: if isAdmin();
+    }
+
+    // 2. Categories Hierarchy (Read Publicly, Mutated ONLY by Admins)
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidCategory(incoming()) && isValidId(categoryId);
+      allow update: if isAdmin() && isValidCategory(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 3. Brands (Read Publicly, Mutated ONLY by Admins)
+    match /brands/{brandId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidBrand(incoming()) && isValidId(brandId);
+      allow update: if isAdmin() && isValidBrand(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 4. Client Completed Orders (Private customer data isolation)
+    match /orders/{orderId} {
+      allow read: if isAdmin() || (isSignedIn() && existing().customerId == request.auth.uid);
+      allow create: if isAdmin() || (isSignedIn() && isValidOrder(incoming()) && incoming().customerId == request.auth.uid);
+      allow update: if isAdmin() && isValidOrder(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 5. Customer Profile Mappings (Strict Role Elevation Guards)
+    match /customers/{customerId} {
+      allow read: if isAdmin() || (isSignedIn() && customerId == request.auth.uid);
+      allow create: if isAdmin() || (
+        isSignedIn() && customerId == request.auth.uid 
+        && isValidCustomer(incoming()) 
+        && incoming().role == 'customer' // Forbid self-assigning role='admin' on register
+      );
+      allow update: if isAdmin() || (
+        isSignedIn() && customerId == request.auth.uid 
+        && isValidCustomer(incoming())
+        && incoming().role == existing().role // Forbid updating to elevated role
+      );
+      allow delete: if isAdmin();
+    }
+
+    // 6. Pre-sale Quotations & Leads (Public Submission, Protected Reads)
+    match /enquiries/{enquiryId} {
+      allow read: if isAdmin() || (isSignedIn() && (existing().customerId == request.auth.uid || existing().email == request.auth.token.email));
+      allow create: if isValidEnquiry(incoming()) && isValidId(enquiryId);
+      allow update: if isAdmin() && isValidEnquiry(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 7. Offers & Promotional Campaigns (Read Publicly, Mutated ONLY by Admins)
+    match /offers/{offerId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidOffer(incoming()) && isValidId(offerId);
+      allow update: if isAdmin() && isValidOffer(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 8. Showcase Walkthrough Videos (Read Publicly, Mutated ONLY by Admins)
+    match /videos/{videoId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidVideo(incoming()) && isValidId(videoId);
+      allow update: if isAdmin() && isValidVideo(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 9. Knowledgebase FAQs (Read Publicly, Mutated ONLY by Admins)
+    match /faqs/{faqId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidFAQ(incoming()) && isValidId(faqId);
+      allow update: if isAdmin() && isValidFAQ(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // 10. Site Settings & Dynamic Layout configurations
+    match /settings/{settingsId} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidId(settingsId);
+    }
+
+    // 11. Public Connection & Verification Tests
+    match /connection_tests/{testId} {
+      allow read, write: if true;
+    }
+  }
+}
