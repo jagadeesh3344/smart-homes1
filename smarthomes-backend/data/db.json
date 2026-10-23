@@ -1,6 +1,106 @@
 {
   "products": [
     {
+      "id": "prod-1792764729840-4qv0c",
+      "name": "test11",
+      "slug": "test11",
+      "sku": "KSH-K S-295",
+      "brand": "K Smart Homes",
+      "categoryId": "security-systems",
+      "categoryName": "Smart Home Automation",
+      "subcategoryId": "",
+      "subcategoryName": "",
+      "shortDescription": "hjk",
+      "description": "drfghbnj",
+      "price": 28000,
+      "originalPrice": 30000,
+      "salePrice": 28000,
+      "priceOnRequest": false,
+      "discountPercentage": 7,
+      "stock": 29,
+      "status": "Active",
+      "featured": false,
+      "isFeatured": false,
+      "images": [
+        "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80",
+      "variants": [],
+      "specifications": [],
+      "specificationsMap": {},
+      "features": [
+        "dfgh",
+        "cgfbhj",
+        "ygtf"
+      ],
+      "compatibility": [
+        "Apple Home",
+        "Google Home"
+      ],
+      "applications": [
+        "Residential",
+        "Luxury Villa"
+      ],
+      "warranty": "3 Years Comprehensive Warranty",
+      "tags": [
+        "smart-home",
+        "luxury"
+      ],
+      "cataloguePage": 23,
+      "protocol": "Zigbee 3.0 / Matter",
+      "createdAt": "2026-10-23T14:12:09.840Z",
+      "updatedAt": "2026-10-23T14:12:09.845Z"
+    },
+    {
+      "id": "prod-1788877091734-a8ju5",
+      "name": "test product",
+      "slug": "test-product",
+      "sku": "KSH-K S-773",
+      "brand": "K Smart Homes",
+      "categoryId": "cat-audio",
+      "categoryName": "High-Fidelity Multi-Room Audio",
+      "subcategoryId": "",
+      "subcategoryName": "",
+      "shortDescription": "edfghjkl",
+      "description": "derftgyhuij",
+      "price": 19000,
+      "originalPrice": 20000,
+      "salePrice": 19000,
+      "priceOnRequest": false,
+      "discountPercentage": 5,
+      "stock": 90,
+      "status": "Active",
+      "featured": false,
+      "isFeatured": false,
+      "images": [
+        "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80"
+      ],
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80",
+      "variants": [],
+      "specifications": [],
+      "specificationsMap": {},
+      "features": [
+        "erdfghjkikhjbn"
+      ],
+      "compatibility": [
+        "Apple Home",
+        "Google Home"
+      ],
+      "applications": [
+        "Residential",
+        "Luxury Villa"
+      ],
+      "warranty": "3 Years Comprehensive Warranty",
+      "tags": [
+        "smart-home",
+        "luxury"
+      ],
+      "cataloguePage": 1,
+      "protocol": "Zigbee 3.0 / Matter",
+      "createdAt": "2026-09-08T14:18:11.734Z",
+      "updatedAt": "2026-09-08T14:18:12.339Z"
+    },
+    {
       "id": "prod-1788538415120-7ljtl",
       "name": "Bang & Olufsen Beolab 28 Luxury Floor Speakers",
       "slug": "bang-olufsen-beolab-28-luxury-floor-speakers",
@@ -392,6 +492,45 @@
   ],
   "orders": [
     {
+      "id": "ord-1792764794409-ygz4",
+      "orderNumber": "ENQ-2026-625785",
+      "customerName": "UPPUTALLA Venkata Jagadeesh",
+      "customerEmail": "uvjagadeesh1234@gmail.com",
+      "customerPhone": "+918978514653",
+      "address": "Sharadha Nagar, st no-11, vanasthalipuram, Hyderabad",
+      "city": "",
+      "shippingAddress": {
+        "street": "Sharadha Nagar, st no-11, vanasthalipuram, Hyderabad",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500034",
+        "country": "India"
+      },
+      "items": [
+        {
+          "productId": "prod-1792764729840-4qv0c",
+          "productName": "test11",
+          "sku": "KSH-K S-295",
+          "quantity": 1,
+          "price": 28000,
+          "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80"
+        }
+      ],
+      "subtotal": 23729,
+      "tax": 4271,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 28000,
+      "totalAmount": 28000,
+      "orderStatus": "Confirmed",
+      "paymentStatus": "Pending",
+      "paymentProvider": "Razorpay",
+      "notes": "",
+      "type": "quote",
+      "createdAt": "2026-10-23T14:13:14.409Z",
+      "updatedAt": "2026-10-23T14:13:14.409Z"
+    },
+    {
       "id": "ord-1788849188111-5pzl",
       "orderNumber": "ATH-999888",
       "customerName": "Aetheria VIP Test Client",
@@ -459,13 +598,13 @@
       "discount": 0,
       "total": 99120,
       "totalAmount": 99120,
-      "orderStatus": "Confirmed",
-      "paymentStatus": "Pending",
+      "orderStatus": "Paid",
+      "paymentStatus": "Captured",
       "paymentProvider": "Razorpay",
       "notes": "Please coordinate doorstep payment with delivery agent.",
       "type": "purchase",
       "createdAt": "2026-09-04T17:28:09.830Z",
-      "updatedAt": "2026-09-04T17:28:09.830Z"
+      "updatedAt": "2026-09-08T14:18:31.174Z"
     },
     {
       "id": "ord-1788541729279-diqx",
@@ -495,13 +634,13 @@
       ],
       "subtotal": 143000,
       "totalAmount": 143000,
-      "orderStatus": "Confirmed",
-      "paymentStatus": "Pending",
+      "orderStatus": "Paid",
+      "paymentStatus": "Captured",
       "paymentProvider": "Razorpay",
       "notes": "",
       "type": "purchase",
       "createdAt": "2026-09-04T17:08:49.279Z",
-      "updatedAt": "2026-09-04T17:08:49.279Z"
+      "updatedAt": "2026-09-08T14:18:31.725Z"
     },
     {
       "id": "ord-1788538446145-yprp",
@@ -532,6 +671,27 @@
     }
   ],
   "customers": [
+    {
+      "id": "cust-1792764771306",
+      "name": "UPPUTALLA Venkata Jagadeesh",
+      "email": "uvjagadeesh1234@gmail.com",
+      "phone": "+918978514653",
+      "numberForOrders": 1,
+      "totalPurchaseValue": 28000,
+      "accountStatus": "Active",
+      "createdAt": "2026-10-23T14:12:51.306Z",
+      "addresses": [
+        {
+          "street": "Sharadha Nagar, st no-11, vanasthalipuram, Hyderabad",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "postalCode": "500034",
+          "country": "India",
+          "isDefault": true
+        }
+      ],
+      "lastOrderDate": "2026-10-23T14:13:14.410Z"
+    },
     {
       "id": "cust-1788538446145",
       "name": "Venkata Naveen",
@@ -678,5 +838,5 @@
     }
   ],
   "version": 1,
-  "lastUpdated": "2026-09-08T06:33:09.759Z"
+  "lastUpdated": "2026-10-23T14:13:14.411Z"
 }

@@ -28,3 +28,9 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Separated Projects
+smarthomes-admin/
+
+# Temp
+tmp/

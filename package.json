@@ -1,0 +1,14 @@
+{
+  "name": "smarthomes-ecosystem",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aetheria Smart Home & Automation Ecosystem",
+  "scripts": {
+    "dev:backend": "npm --prefix smarthomes-backend run dev",
+    "dev:storefront": "npm --prefix aetheria-smart-home run dev",
+    "dev:admin": "npm --prefix smarthomes-admin run dev",
+    "dev:frontend": "npm --prefix aetheria-smart-home run dev",
+    "dev": "npm run dev:backend",
+    "install:all": "npm --prefix smarthomes-backend install && npm --prefix aetheria-smart-home install && npm --prefix smarthomes-admin install"
+  }
+}
